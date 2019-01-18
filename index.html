@@ -175,7 +175,14 @@
                         <nav id="dropdown">
                             <ul class="mobile-menu-nav">
                                 <li><a href="index.html">Home</a></li>
-								<li><a href="detainees.html">Home</a></li>
+								<li><a href="detainees.html">Detainees</a></li>
+								<li><a data-toggle="collapse" data-target="#mobile-maintenance" href="#">Maintenance</a>
+                                    <ul id="mobile-maintenance" class="collapse dropdown-header-top">
+                                        <li><a href="official.html">Officials</a></li>
+                                        <li><a href="groups.html">Groups</a></li>
+                                        <li><a href="accounts.html">Accounts</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#" logout-account>Logout</a></li>
                             </ul>
                         </nav>
@@ -193,9 +200,19 @@
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                         <li class="active"><a href="index.html"><i class="text-success fa fa-dashboard"></i> Home</a></li>
                         <li><a href="detainees.html"><i class="fa fa-users"></i> Detainees</a></li>
+						<li><a data-toggle="tab" href="#maintenance"><i class="fa fa-gear"></i> Maintenance</a></li>
 						<li><a href="" logout-account><i class="notika-icon notika-next"></i> Logout</a></li>
                     </ul>
-                </div>
+					<div class="tab-content custom-menu-content">
+                        <div id="maintenance" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="officials.html">Officials</a></li>
+                                <li><a href="groups.html">Groups</a></li>
+                                <li><a href="accounts.html">Accounts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+				</div>
             </div>
         </div>
     </div>
