@@ -20,6 +20,21 @@ angular.module('app-module', ['bootstrap-modal','ui.bootstrap','block-ui','boots
 			
 		};
 		
+		function positions(scope) {
+			
+			$http({
+				method: 'POST',
+				url: 'api/suggestions/positions.php'
+			}).then(function mySucces(response) {
+				
+				scope.positions = response.data;
+				
+			},function myError(response) {
+				
+			});	
+			
+		};
+		
 		self.list = function(scope) {
 			
 			bui.show();
@@ -61,15 +76,14 @@ angular.module('app-module', ['bootstrap-modal','ui.bootstrap','block-ui','boots
 			
 			// bui.show();
 			
+			title = "Form";
+			
 			scope.official = {};
 			scope.official.id = 0;
+			positions(scope);
 			
 			mode(scope,row);
-			
-			$('#content').load('forms/official.html',function() {
-				$timeout(function() { $compile($('#content')[0])(scope); },200);
-			});
-			
+
 			if (row != null) {
 				
 				if (scope.$id > 2) scope = scope.$parent;	
@@ -90,6 +104,8 @@ angular.module('app-module', ['bootstrap-modal','ui.bootstrap','block-ui','boots
 					
 				});
 			};
+			
+			bootstrapModal.box(scope,title,'dialogs/official.html');
 			
 		};
 		

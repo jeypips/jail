@@ -1,0 +1,39 @@
+<div class="row">
+	<form class="form-element-list" name="formHolder.detainee" novalidate autocomplete="off">
+		<div class="basic-tb-hd">
+		
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="form-group ic-cmp-int">
+					<label>First Name</label>
+					<input type="text" class="form-control" placeholder="First Name" ng-model="detainee.firstname">
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label>Middle Name</label>
+					<input type="text" class="form-control" placeholder="Middle Name" ng-model="detainee.middlename">
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label>Last Name</label>
+					<input type="text" class="form-control" placeholder="Last Name" ng-model="detainee.lastname">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<label>Appointment Status</label>
+				<select class="form-control">
+					<option value="Job Order">Job Order</option>
+				</select>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<label>Position</label>
+				<select class="form-control" ng-model="" ng-options="p.position_description for p in positions track by p.position_id"></select>
+			</div>
+		</div>
+	</form>
+</div>
